@@ -1,0 +1,265 @@
+{
+  "categories": [
+    {
+      "name": "Gestión de Componentes",
+      "activities": [
+        {
+          "name": "Crear componente",
+          "description": "Permite crear un componente",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Editar componente",
+          "description": "Editar el nombre o si es transparente",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Eliminar componente",
+          "description": "Elimina un componente",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Subir imágenes",
+          "description": "Sube imagen del componente y selecciona sus medidas",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Editar Imágenes",
+          "description": "Edita las medidas del componente",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Eliminar imágenes",
+          "description": "Elimina un componente",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Subir backups",
+          "description": "Subir backup, es un zip obtenido de cvat",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Eliminar backups",
+          "description": "Elimina un backup",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Listar componentes",
+          "description": "Muestra los componentes",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Listar imágenes",
+          "description": "Muestra las imágenes de un componente",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Listar backups",
+          "description": "Muestra los backups",
+          "connection": "Base de datos PostgreSQL"
+        }
+      ]
+    },
+    {
+      "name": "Gestión de Charolas",
+      "activities": [
+        {
+          "name": "Crear tray",
+          "description": "Crea una charola",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Editar tray",
+          "description": "Edita el nombre de la charola",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Listar trays",
+          "description": "Lista las charolas",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Eliminar tray",
+          "description": "Elimina una charola",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Subir imágenes del tray",
+          "description": "Sube imagen de una charola y selecciona sus medidas",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Eliminar imágenes del tray",
+          "description": "Elimina una charola",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Editar imágenes del tray",
+          "description": "Edita las medidas de una imagen",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Listar imágenes del tray",
+          "description": "Lista las imágenes de una charola",
+          "connection": "Base de datos PostgreSQL"
+        }
+      ]
+    },
+    {
+      "name": "Gestión de Kits",
+      "activities": [
+        {
+          "name": "Crear kits",
+          "description": "Crea un kit",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Añadir componentes al kit",
+          "description": "Añade los componentes pertenecientes a ese kit",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Configurar componentes dentro del kits",
+          "description": "Selecciona su posición, paso y otras configuraciones dentro del kit",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Editar componentes dentro del kit",
+          "description": "Editar posición, paso y otras configuraciones dentro del kit",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Eliminar componente del kit",
+          "description": "Elimina el componente del kit",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Eliminar kit",
+          "description": "Elimina un kit",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Generar copia del kit",
+          "description": "Se clona un kit",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Listar kits",
+          "description": "Se listan los kits",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Listar componentes del kit",
+          "description": "Se listan los componentes de un kit",
+          "connection": "Base de datos PostgreSQL"
+        }
+      ]
+    },
+    {
+      "name": "Gestión de Modelos",
+      "activities": [
+        {
+          "name": "Crear sintético",
+          "description": "Se genera un dataset sintético a partir de la configuración del kit",
+          "connection": "teleflexworker1 10.210.20.153"
+        },
+        {
+          "name": "Entrenar modelo inicial",
+          "description": "Se entrena un modelo basado en el dataset sintético",
+          "connection": "teleflexworker2 10.210.20.70"
+        },
+        {
+          "name": "Crear proyecto de cvat",
+          "description": "Se crea un proyecto de cvat a partir de la configuración del kit",
+          "connection": "teleflexCvat"
+        },
+        {
+          "name": "Refinar modelo",
+          "description": "Se refina un modelo usando los videos de cvat",
+          "connection": "teleflexworker2 10.210.20.70"
+        },
+        {
+          "name": "Refinar modelo transparente",
+          "description": "Se refina un modelo de transparentes usando los backups de los componentes marcados como transparentes",
+          "connection": "teleflexworker2 10.210.20.71"
+        }
+      ]
+    },
+    {
+      "name": "Gestión de Usuarios",
+      "activities": [
+        {
+          "name": "Crear usuario",
+          "description": "Crea un usuario",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Modificar usuario",
+          "description": "Se puede modifica nombre, apellidos, contraseña, grupo al que pertenece.",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Eliminar usuario",
+          "description": "Se elimina un usuario",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Listar usuario",
+          "description": "Listar los usuarios",
+          "connection": "Base de datos PostgreSQL"
+        }
+      ]
+    },
+    {
+      "name": "Gestión de Líneas",
+      "activities": [
+        {
+          "name": "Crear línea",
+          "description": "Se crea una línea indicando el número, la cantidad de pasos, la ip del jetson de sólidos, jetson de transparentes y del raspberry",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Editar la línea",
+          "description": "Se edita el número, la cantidad de pasos, la ip del jetson de sólidos, jetson de transparentes y del raspberry",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Crear cámara",
+          "description": "Se añade una cámara a una línea incluyendo su número y su ip",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Editar la cámara",
+          "description": "Se puede editar el número y la ip.",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Eliminar cámara",
+          "description": "Se elimina una cámara",
+          "connection": "Base de datos PostgreSQL"
+        },
+        {
+          "name": "Eliminar línea",
+          "description": "Se elimina una línea",
+          "connection": "Base de datos PostgreSQL"
+        }
+      ]
+    },
+    {
+      "name": "Gestión de Configuración",
+      "activities": [
+        {
+          "name": "Mandar configuración (apply_configuration)",
+          "description": "Mandar la configuración a otros dispositivos.",
+          "connection": "Dependiendo de la línea, L1-C1 a L1-C8, Edge computing Orin 16 GB, Edge computing Orin 8GB, PLC, Edge computing rPi5 Broker, Monitor, Tablets.",
+          "details": [
+            "Las cámaras van de L1-C1 a L1-C8, siendo L1 la línea 1 y C1 la cámara 1.",
+            "Cada línea tiene un Edge computing rPi5 broker que se conecta con Edge computing Orin 16 GB (modelo de sólidos) y Edge computing Orin 8GB (modelo de transparentes).",
+            "Los resultados de las inferencias por cámara se muestran en el monitor y en las tabletas."
+          ]
+        }
+      ]
+    }
+  ]
+}
+
